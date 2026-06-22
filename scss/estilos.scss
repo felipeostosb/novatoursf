@@ -1,0 +1,23 @@
+@use "variables" as *;
+@use "mixins" as *;
+@use "componentes";
+
+body {
+  margin: 0;
+  background-color: $COLOR-FONDO;
+  color: $COLOR-TEXTO;
+  font-family: system-ui, sans-serif;
+}
+
+main {
+  @include contenedor;
+  padding-block: 2rem;
+}
+
+h1 {
+  color: $COLOR-PRIMARIO;
+}
+
+a {
+  color: inherit;
+}
