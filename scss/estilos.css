@@ -1,0 +1,174 @@
+@charset "UTF-8";
+/*
+Archivo para guardar solo variables.
+
+Ejemplo:
+$COLOR-PRIMARIO: #0d6efd;
+$COLOR-FONDO: #0a0e17;
+$ANCHO-CONTENEDOR: 1200px;
+*/
+/*
+Archivo para guardar mixins reutilizables.
+
+Ejemplo:
+@mixin contenedor {
+  width: min(100% - 2rem, $ANCHO-CONTENEDOR);
+  margin-inline: auto;
+}
+
+Uso:
+.main {
+  @include contenedor;
+}
+*/
+/*
+Archivo para estilos reutilizables de componentes.
+
+Ejemplo:
+.btn {
+  padding: 0.75rem 1rem;
+  background: $COLOR-PRIMARIO;
+  color: $COLOR-TEXTO;
+}
+
+.tarjeta {
+  padding: 1rem;
+  background: $COLOR-SUPERFICIE;
+}
+*/
+/* =====================
+INICIO HEADER/ CABECERA
+======================== */
+/* Resetear estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Para que el padding y el border se incluyan en el ancho y alto del elemento */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #6c757d;
+  color: #FFFFFF;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* [CABECERA] Inicia Cabecera fija (Fixed Header) */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+  /* [CABECERA]Inicia transparente*/
+  background-color: transparent;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* [CABECERA] CLASE QUE JAVASCRIPT USARA PARA HACER SCROLL*/
+}
+.header.scrolled {
+  background-color: rgba(10, 14, 23, 0.95);
+  backdrop-filter: blur(10px); /* Efecto de desenfoque para el fondo */
+}
+
+/* [CABECERA] Logo de la cabecera */
+.logo {
+  font-size: 24px;
+  font-weight: normal;
+  color: #FFFFFF;
+}
+.logo strong {
+  font-weight: 800;
+}
+
+/* [CABECERA] menu */
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  cursor: pointer; /* Cambia el cursor al pasar sobre los elementos del menú */
+}
+.menu a {
+  color: #a0aabf;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px; /* Espaciado entre letras para mejorar la legibilidad */
+}
+.menu a:hover {
+  color: #FFFFFF; /* Cambia el color al pasar el cursor sobre el enlace */
+}
+
+.btn {
+  background-color: #0d6efd;
+  color: #FFFFFF;
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 800;
+}
+.btn:hover {
+  background-color: #0b5ed7; /* Oscurece el color al pasar el cursor */
+}
+
+/* =====================
+FIN HEADER/ CABECERA
+======================== */
+/* =====================
+INICIO FOOTER/ PIE DE PAGINA
+======================== */
+.footer {
+  background-color: rgba(0, 0, 0, 0);
+  color: #FFFFFF;
+  padding: 80px 20px;
+  margin-top: 100px;
+  text-align: center;
+}
+.footer .footer-logo {
+  font-size: 24px;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+.footer .footer-logo strong {
+  font-weight: 800;
+}
+.footer .footer-logo p {
+  color: #6c757d;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* =====================
+FIN FOOTER/ PIE DE PAGINA
+======================== */
+/*
+Este archivo solo conecta los parciales Sass.
+
+Ejemplo de uso aquí:
+
+body {
+  margin: 0;
+  background-color: $COLOR-FONDO;
+  color: $COLOR-TEXTO;
+}
+
+main {
+  @include contenedor;
+}
+
+Para que no te confundas al empezar a guardar estilos, usa esta regla simple:
+
+Si el estilo afecta a toda la página, va en estilos.scss:1.
+
+Si el estilo se repite en varias partes, conviértelo en mixin en _mixins.scss:1.
+
+Si es un bloque visual reutilizable, como header, footer, botón o tarjeta, va en _componentes.scss:1.
+
+Si es un valor fijo que usarás muchas veces, como colores o anchos, va en _variables.scss:1.
+*/
+
+/*# sourceMappingURL=estilos.css.map */

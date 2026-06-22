@@ -2,22 +2,28 @@
 @use "mixins" as *;
 @use "componentes";
 
+/*
+Este archivo solo conecta los parciales Sass.
+
+Ejemplo de uso aquí:
+
 body {
   margin: 0;
   background-color: $COLOR-FONDO;
   color: $COLOR-TEXTO;
-  font-family: system-ui, sans-serif;
 }
 
 main {
   @include contenedor;
-  padding-block: 2rem;
 }
 
-h1 {
-  color: $COLOR-PRIMARIO;
-}
+Para que no te confundas al empezar a guardar estilos, usa esta regla simple:
 
-a {
-  color: inherit;
-}
+Si el estilo afecta a toda la página, va en estilos.scss:1.
+
+Si el estilo se repite en varias partes, conviértelo en mixin en _mixins.scss:1.
+
+Si es un bloque visual reutilizable, como header, footer, botón o tarjeta, va en _componentes.scss:1.
+
+Si es un valor fijo que usarás muchas veces, como colores o anchos, va en _variables.scss:1.
+*/

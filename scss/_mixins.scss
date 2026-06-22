@@ -1,29 +1,23 @@
 @use "variables" as *;
 
+/*
+Archivo para guardar mixins reutilizables.
+
+Ejemplo:
 @mixin contenedor {
   width: min(100% - 2rem, $ANCHO-CONTENEDOR);
   margin-inline: auto;
 }
 
-@mixin flex-center($gap: 1rem) {
-  display: flex;
-  align-items: center;
-  gap: $gap;
+Uso:
+.main {
+  @include contenedor;
 }
+*/
 
-@mixin boton-base {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.85rem 1.2rem;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 700;
-  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
-}
 
-@mixin card {
-  background: $COLOR-SUPERFICIE;
-  border: 1px solid $COLOR-BORDE;
-  border-radius: 1rem;
+@mixin fila-separada {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

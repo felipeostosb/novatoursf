@@ -1,77 +1,143 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-header,
-.footer {
-  @include contenedor;
-  @include flex-center(1.25rem);
-  justify-content: space-between;
-}
+/*
+Archivo para estilos reutilizables de componentes.
 
-header {
-  padding: 1.25rem 0;
-  border-bottom: 1px solid $COLOR-BORDE;
-
-  .logo {
-    color: $COLOR-TEXTO;
-    font-size: 1.4rem;
-    letter-spacing: 0.08em;
-  }
-
-  .menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    @include flex-center(1rem);
-    flex-wrap: wrap;
-
-    a {
-      color: $COLOR-TEXT-MENU;
-      text-decoration: none;
-      font-size: 0.95rem;
-
-      &:hover {
-        color: $COLOR-TEXTO;
-      }
-    }
-  }
-
-  .btn {
-    @include boton-base;
-    background: $COLOR-PRIMARIO;
-    color: $COLOR-TEXTO;
-
-    &:hover {
-      transform: translateY(-1px);
-      background: color-mix(in srgb, $COLOR-PRIMARIO 85%, white);
-    }
-  }
-}
-
-.footer {
-  padding: 2rem 0;
-  margin-top: 3rem;
-  border-top: 1px solid $COLOR-BORDE;
-  color: $COLOR-TEXT-MENU;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.btn-secundario {
-  @include boton-base;
-  @include card;
+Ejemplo:
+.btn {
+  padding: 0.75rem 1rem;
+  background: $COLOR-PRIMARIO;
   color: $COLOR-TEXTO;
-
-  &:hover {
-    transform: translateY(-1px);
-  }
 }
 
 .tarjeta {
-  @include card;
-  padding: 1.25rem;
+  padding: 1rem;
+  background: $COLOR-SUPERFICIE;
+}
+*/
+
+
+/* =====================
+INICIO HEADER/ CABECERA
+======================== */
+
+/* Resetear estilos */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Para que el padding y el border se incluyan en el ancho y alto del elemento */
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+  background-color: $COLOR-FONDO;
+  color: $COLOR-TEXTO;
+}
+a {
+  text-decoration: none;
 }
 
-.seccion {
-  padding-block: $ESPACIADO-SECCION;
+/* [CABECERA] Inicia Cabecera fija (Fixed Header) */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+
+
+/* [CABECERA]Inicia transparente*/
+  background-color: transparent;
+  padding: 20px 50px;
+  @include fila-separada;
+
+
+
+/* [CABECERA] CLASE QUE JAVASCRIPT USARA PARA HACER SCROLL*/
+&.scrolled {
+    background-color: rgba(10,14,23, 0.95) /* Color de fondo con opacidad para el efecto de transparencia */;
+    backdrop-filter: blur(10px); /* Efecto de desenfoque para el fondo */
+  }
 }
+
+/* [CABECERA] Logo de la cabecera */
+
+.logo {
+  font-size: 24px;
+  font-weight: normal;
+  color: $COLOR-TEXTO;
+  strong {
+    font-weight: 800;
+  }
+}
+
+/* [CABECERA] menu */
+
+.menu{
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  cursor: pointer; /* Cambia el cursor al pasar sobre los elementos del menú */
+  a{
+    color: $COLOR-TEXTO-MENU;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px; /* Espaciado entre letras para mejorar la legibilidad */
+    &:hover {
+      color: $COLOR-TEXTO; /* Cambia el color al pasar el cursor sobre el enlace */}
+ 
+    }
+}
+
+
+.btn{
+  background-color:$COLOR-PRIMARIO;
+  color:$COLOR-TEXTO;
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 800;
+  &:hover {
+    background-color: #0b5ed7; /* Oscurece el color al pasar el cursor */
+  }
+}
+
+/* =====================
+FIN HEADER/ CABECERA
+======================== */
+
+
+
+
+/* =====================
+INICIO FOOTER/ PIE DE PAGINA
+======================== */
+
+.footer {
+  background-color: #0000;
+  color: $COLOR-TEXTO;
+  padding: 80px 20px;
+  margin-top: 100px;
+  text-align: center;
+
+  .footer-logo {
+    font-size: 24px;
+    color: $COLOR-TEXTO;
+    margin-bottom: 20px;
+    strong {
+      font-weight: 800;
+    }
+    
+    p { 
+      color:#6c757d;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+  }
+}
+
+
+/* =====================
+FIN FOOTER/ PIE DE PAGINA
+======================== */
