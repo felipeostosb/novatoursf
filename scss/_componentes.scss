@@ -24,16 +24,19 @@ INICIO HEADER/ CABECERA
 
 /* Resetear estilos */
 
-*{
+* {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Para que el padding y el border se incluyan en el ancho y alto del elemento */
+  box-sizing: border-box;
+  /* Para que el padding y el border se incluyan en el ancho y alto del elemento */
   font-family: Arial, Helvetica, sans-serif;
 }
-body{
+
+body {
   background-color: $COLOR-FONDO;
   color: $COLOR-TEXTO;
 }
+
 a {
   text-decoration: none;
 }
@@ -44,20 +47,24 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+  z-index: 1000;
+  /* Asegura que el header esté por encima de otros elementos */
 
 
-/* [CABECERA]Inicia transparente*/
+  /* [CABECERA]Inicia transparente*/
   background-color: transparent;
   padding: 20px 50px;
   @include fila-separada;
 
 
 
-/* [CABECERA] CLASE QUE JAVASCRIPT USARA PARA HACER SCROLL*/
-&.scrolled {
-    background-color: rgba(10,14,23, 0.95) /* Color de fondo con opacidad para el efecto de transparencia */;
-    backdrop-filter: blur(10px); /* Efecto de desenfoque para el fondo */
+  /* [CABECERA] CLASE QUE JAVASCRIPT USARA PARA HACER SCROLL*/
+  &.scrolled {
+    background-color: rgba(10, 14, 23, 0.95)
+      /* Color de fondo con opacidad para el efecto de transparencia */
+    ;
+    backdrop-filter: blur(10px);
+    /* Efecto de desenfoque para el fondo */
   }
 }
 
@@ -67,6 +74,7 @@ a {
   font-size: 24px;
   font-weight: normal;
   color: $COLOR-TEXTO;
+
   strong {
     font-weight: 800;
   }
@@ -74,32 +82,40 @@ a {
 
 /* [CABECERA] menu */
 
-.menu{
+.menu {
   display: flex;
   list-style: none;
   gap: 40px;
-  cursor: pointer; /* Cambia el cursor al pasar sobre los elementos del menú */
-  a{
+  cursor: pointer;
+
+  /* Cambia el cursor al pasar sobre los elementos del menú */
+  a {
     color: $COLOR-TEXTO-MENU;
     font-size: 12px;
     font-weight: 800;
-    letter-spacing: 1px; /* Espaciado entre letras para mejorar la legibilidad */
+    letter-spacing: 1px;
+
+    /* Espaciado entre letras para mejorar la legibilidad */
     &:hover {
-      color: $COLOR-TEXTO; /* Cambia el color al pasar el cursor sobre el enlace */}
- 
+      color: $COLOR-TEXTO;
+      /* Cambia el color al pasar el cursor sobre el enlace */
     }
+
+  }
 }
 
 
-.btn{
-  background-color:$COLOR-PRIMARIO;
-  color:$COLOR-TEXTO;
+.btn {
+  background-color: $COLOR-PRIMARIO;
+  color: $COLOR-TEXTO;
   padding: 12px 28px;
   border-radius: 4px;
   font-size: 14px;
   font-weight: 800;
+
   &:hover {
-    background-color: #0b5ed7; /* Oscurece el color al pasar el cursor */
+    background-color: #0b5ed7;
+    /* Oscurece el color al pasar el cursor */
   }
 }
 
@@ -125,12 +141,13 @@ INICIO FOOTER/ PIE DE PAGINA
     font-size: 24px;
     color: $COLOR-TEXTO;
     margin-bottom: 20px;
+
     strong {
       font-weight: 800;
     }
-    
-    p { 
-      color:#6c757d;
+
+    p {
+      color: #6c757d;
       margin-bottom: 10px;
       font-size: 14px;
     }
@@ -141,3 +158,131 @@ INICIO FOOTER/ PIE DE PAGINA
 /* =====================
 FIN FOOTER/ PIE DE PAGINA
 ======================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===============================
+   LA ETIQUETA PEQUEÑA DESCUBRE EL PERU (BADGE)
+   =============================== */
+.badge {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 6px 16px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+/* ===============================
+   FIN DE LA ETIQUETA PEQUEÑA DESCUBRE EL PERU (BADGE)
+   =============================== */
+
+
+/* ===============================
+   HERO SECTION (La Portada Completa)
+   =============================== */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  @include centrar-absoluto;
+  text-align: center;
+
+
+
+  /* -------------------------------------
+     CAPA 1: EL SLIDER (Contenedor de imágenes)
+     ------------------------------------- */
+  .hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  /* Las imágenes individuales */
+  .hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  /* La imagen principal (activa) se vuelve visible */
+  .hero-slide.active {
+    opacity: 1;
+  }
+
+  /* -------------------------------------
+     CAPA 2: EL FILTRO OSCURO
+     ------------------------------------- */
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 3;
+  }
+
+  /* -------------------------------------
+     CAPA 3: LOS TEXTOS Y BOTONES
+     ------------------------------------- */
+
+
+  .hero-content {
+    position: relative;
+    z-index: 3;
+    color: $COLOR-TEXTO;
+    padding: 0 20px;
+    @include centrar-absoluto;
+
+
+    h1 {
+      font-size: 70px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin: 20px 0;
+    }
+
+    p {
+      font-size: 18px;
+      color: #cccccc;
+      margin-bottom: 40px;
+    }
+
+    /* -------------------------------------
+     CAPA 3: FIN DE LOS TEXTOS Y BOTONES
+     ------------------------------------- */
+  }
+}
+
+
+
+/* ===============================
+   FIN DEL HERO SECTION (La Portada Completa)
+   =============================== */

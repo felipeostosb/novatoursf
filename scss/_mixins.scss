@@ -17,7 +17,15 @@ Uso:
 
 
 @mixin fila-separada {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+@mixin centrar-absoluto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

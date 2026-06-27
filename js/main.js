@@ -11,3 +11,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+
+
+
+// ==========================================
+// 📸 SLIDER DE IMÁGENES (PORTADA)
+// ==========================================
+
+const slides = document.querySelectorAll('.hero-slide');
+let slideActual = 0;
+function cambiarSlide() {
+
+    slides[slideActual].classList.remove('active');
+    slideActual = (slideActual + 1) % slides.length;
+    slides[slideActual].classList.add('active');
+}
+
+setInterval(cambiarSlide, 5000);
