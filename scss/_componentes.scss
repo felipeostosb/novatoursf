@@ -286,3 +286,99 @@ FIN FOOTER/ PIE DE PAGINA
 /* ===============================
    FIN DEL HERO SECTION (La Portada Completa)
    =============================== */
+
+
+
+
+
+
+
+
+/* ===============================
+   SECCIÓN: INTRODUCCIÓN
+   =============================== */ 
+   
+.intro{
+  padding:100px 15%;
+  text-align:center; 
+  background-color: $COLOR-FONDO-CLARO;
+
+  h2{
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: $COLOR-TEXTO-OSCURO;
+
+    em{
+      color: $COLOR-PRIMARIO;
+      font-style: italic;
+    }
+  }
+
+  p{
+
+    font-size: 18px;
+    color: $COLOR-TEXTO-PARRAFO;
+    line-height: 1.6;
+  }
+
+  }
+
+
+  /* ===============================
+   SECCIÓN: DESTINOS (GRID)
+   =============================== */
+
+.destinations {
+  padding: 50px 10%;
+  background-color: $COLOR-FONDO-GRIS;
+
+  .destinations-header { 
+     text-align: center;
+     margin-bottom: 50px;
+    h2{
+      font-size:32px;
+      color:$COLOR-TEXTO-OSCURO;
+    }
+  }
+}
+
+/* LA MAGIA DE CSS GRID */
+
+.destinations-grid {
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+
+
+/* ===============================
+   COMPONENTE: TARJETA (CARD)
+   =============================== */
+
+   .card{
+    position:relative;
+    display:block;
+    height: 450px;
+    border-radius:5px;
+    overflow:hidden;
+
+    .card-img{
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height: 100%;
+      object-fit:cover;
+      z-index:1;
+    }
+
+    .card-overlay{
+      position:absolute;
+      bottom:0;
+    }
+
+
+   }
+
+    
