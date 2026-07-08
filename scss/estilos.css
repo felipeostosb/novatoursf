@@ -361,6 +361,372 @@ FIN FOOTER/ PIE DE PAGINA
   color: #ffffff;
 }
 
+/* ========================================================
+   COMPONENTES DE CABECERA INTERNA
+   ======================================================== */
+.cabecera-contacto {
+  position: relative;
+  height: 75vh;
+  overflow: hidden;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.cabecera-contacto .cabecera-contacto-imagen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.cabecera-contacto .cabecera-contacto-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+.cabecera-contacto .cabecera-contacto-contenido {
+  position: relative;
+  z-index: 3;
+  color: #FFFFFF;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 700px;
+  margin-inline: auto;
+}
+.cabecera-contacto .cabecera-contacto-contenido h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin: 20px 0;
+}
+.cabecera-contacto .cabecera-contacto-contenido p {
+  font-size: 18px;
+  color: #cccccc;
+}
+
+.texto-superior {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #0d6efd;
+  margin-top: 90px;
+  margin-bottom: 10px;
+}
+
+/* ========================================================
+   SECCIÓN CONTACTO 
+   ======================================================== */
+.contact-section {
+  padding: 100px 10%;
+  background-color: #0b111e;
+  color: #ffffff;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* --- Columna Izquierda --- */
+.titulo-elegante-principal {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 42px;
+  font-weight: normal;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: #ffffff;
+}
+
+.subtitulo-info {
+  color: #788293;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 45px;
+}
+
+.contact-list-premium {
+  list-style: none;
+  padding: 0;
+}
+.contact-list-premium li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 35px;
+}
+.contact-list-premium li .contact-icon-box {
+  width: 44px;
+  height: 44px;
+  background-color: #bc9c70;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+.contact-list-premium li .contact-icon-box svg {
+  width: 20px;
+  height: 20px;
+  fill: #0b111e;
+}
+.contact-list-premium li strong {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #788293;
+  margin-bottom: 4px;
+}
+.contact-list-premium li p {
+  font-size: 14px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.contact-social-squares {
+  display: flex;
+  gap: 12px;
+  margin-top: 40px;
+}
+.contact-social-squares a {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #1f293d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+.contact-social-squares a img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  filter: brightness(0.7);
+}
+.contact-social-squares a:hover {
+  background-color: #121b2d;
+}
+.contact-social-squares a:hover img {
+  filter: brightness(1);
+}
+
+/* ========================================================
+   --- Columna Derecha: Formulario 
+   ======================================================== */
+.contact-form {
+  background-color: #0b111e;
+  border: 1px solid #1f293d;
+  border-radius: 4px;
+  padding: 45px;
+}
+.contact-form .titulo-elegante-formulario {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: normal;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+.contact-form .subtitulo-form {
+  color: #788293;
+  font-size: 14px;
+  margin-bottom: 35px;
+}
+.contact-form .form-group {
+  margin-bottom: 25px;
+}
+.contact-form .form-group label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #788293;
+  margin-bottom: 8px;
+}
+.contact-form .form-group input, .contact-form .form-group select, .contact-form .form-group textarea {
+  width: 100%;
+  padding: 14px;
+  background-color: #121b2d;
+  border: 1px solid #1f293d;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #ffffff;
+}
+.contact-form .form-group input::placeholder, .contact-form .form-group select::placeholder, .contact-form .form-group textarea::placeholder {
+  color: #434f65;
+}
+.contact-form .form-group input:focus, .contact-form .form-group select:focus, .contact-form .form-group textarea:focus {
+  outline: none;
+  border-color: #bc9c70;
+}
+.contact-form .formulario-fila {
+  display: flex;
+  gap: 20px;
+}
+.contact-form .formulario-fila .form-group {
+  flex: 1;
+}
+.contact-form .btn-enviar-muestra {
+  width: 100%;
+  background-color: #bc9c70;
+  color: #0b111e;
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: opacity 0.3s;
+}
+.contact-form .btn-enviar-muestra:hover {
+  opacity: 0.9;
+}
+.contact-form .btn-enviar-muestra .icon-send {
+  width: 14px;
+  height: 14px;
+  fill: #0b111e;
+}
+.contact-form .nota-privacidad-muestra {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #434f65;
+  text-align: center;
+}
+
+/* ========================================================
+   BLOQUE DE CIFRAS (ESTADÍSTICAS)
+   ======================================================== */
+.contacto-estadisticas {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 80px 10%;
+  background-color: #cbb387;
+  text-align: center;
+}
+.contacto-estadisticas .estadistica strong {
+  display: block;
+  font-size: 64px;
+  font-family: "Times New Roman", Georgia, serif;
+  font-weight: bold;
+  color: #0b111e;
+  line-height: 1;
+}
+.contacto-estadisticas .estadistica span {
+  display: block;
+  margin-top: 12px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #0b111e;
+}
+
+/* ========================================================
+   FOOTER PREMIUM
+   ======================================================== */
+.footer-premium {
+  background-color: #0b111e;
+  padding: 60px 8% 40px 8%;
+  border-top: 1px solid #161f30;
+}
+.footer-premium .footer-principal {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.footer-premium .footer-izq {
+  max-width: 400px;
+}
+.footer-premium .footer-izq .footer-logo-brand {
+  font-size: 32px;
+  color: #ffffff;
+  font-weight: normal;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+.footer-premium .footer-izq .footer-logo-brand strong {
+  font-weight: 800;
+}
+.footer-premium .footer-izq .footer-brand-text {
+  color: #4a5568;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.footer-premium .footer-social-icons {
+  display: flex;
+  gap: 12px;
+}
+.footer-premium .footer-social-icons a {
+  display: inline-block;
+  transition: transform 0.3s;
+}
+.footer-premium .footer-social-icons a img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  filter: brightness(0.8);
+}
+.footer-premium .footer-social-icons a:hover {
+  transform: translateY(-2px);
+}
+.footer-premium .footer-der .copyright-text {
+  color: #4a5568;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ========================================================
+   BOTÓN VOLVER 
+   ======================================================== */
+.boton-volver {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #121b2d;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 800;
+  z-index: 999;
+  border: 1px solid #1f293d;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.boton-volver:hover {
+  background-color: #1f293d;
+  transform: scale(1.05);
+}
+
 /*
 Este archivo solo conecta los parciales Sass.
 
