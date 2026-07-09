@@ -353,17 +353,19 @@ FIN FOOTER/ PIE DE PAGINA
 }
 
 /* ========================================================
-   COMPONENTES DE CABECERA INTERNA
+    CONTACTO.HTML   
+CABECERA INTERNA CON IMAGEN DE FONDO 
    ======================================================== */
 .cabecera-contacto {
-  position: relative;
-  height: 75vh;
-  overflow: hidden;
+  position: relative; /* el padre necesita "relative" para que las capas de adentro se ubiquen respecto a él */
+  height: 75vh; /*Significa 75% del Viewport Height (la altura de la ventana gráfica)*/
+  overflow: hidden; /*oculta lo que se salga del bloque*/
   display: flex;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* centra el contenido */
   text-align: center;
 }
 .cabecera-contacto .cabecera-contacto-imagen {
@@ -372,8 +374,8 @@ FIN FOOTER/ PIE DE PAGINA
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  z-index: 1;
+  object-fit: cover; /* recorta la imagen para que llene el espacio sin deformarse */
+  z-index: 1; /* capa de más atrás */
 }
 .cabecera-contacto .cabecera-contacto-overlay {
   position: absolute;
@@ -381,18 +383,14 @@ FIN FOOTER/ PIE DE PAGINA
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5); /* negro semi-transparente encima de la foto */
+  z-index: 2; /* va sobre la imagen */
 }
 .cabecera-contacto .cabecera-contacto-contenido {
   position: relative;
-  z-index: 3;
+  z-index: 3; /* va sobre el velo oscuro, por eso se alcanza a leer */
   color: #FFFFFF;
   padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   max-width: 700px;
   margin-inline: auto;
 }
@@ -417,64 +415,60 @@ FIN FOOTER/ PIE DE PAGINA
 }
 
 /* ========================================================
-   SECCIÓN CONTACTO 
+   SECCIÓN CONTACTO
    ======================================================== */
-.contact-section {
+.contacto-seccion {
   padding: 100px 10%;
   background-color: #0b111e;
   color: #ffffff;
 }
 
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+/* Dos columnas con Flexbox  */
+.contacto-columnas {
+  display: flex;
   gap: 80px;
-  align-items: start;
+  align-items: flex-start; /* ambas columnas empiezan alineadas arriba */
 }
 
-/* --- Columna Izquierda --- */
-.titulo-elegante-principal {
+/* --- Columna izquierda: información --- */
+.contacto-info {
+  flex: 1.1; /* ocupa un poco más de espacio que el formulario (1.1 contra 0.9) */
+}
+
+/* Título con letra tipo elegante  */
+.titulo-elegante {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 42px;
   font-weight: normal;
+  color: #ffffff;
+  font-size: 28px;
+  margin-bottom: 12px;
+  /* Clase extra para el título grande de la columna izquierda */
+}
+.titulo-elegante.grande {
+  font-size: 42px;
   line-height: 1.2;
   margin-bottom: 24px;
-  color: #ffffff;
 }
 
-.subtitulo-info {
+/* Subtítulo gris, reutilizado en info y formulario */
+.subtitulo {
   color: #788293;
   font-size: 15px;
   line-height: 1.6;
-  margin-bottom: 45px;
+  margin-bottom: 35px;
 }
 
-.contact-list-premium {
+/* Lista de datos de contacto (teléfono, email, dirección, horario) */
+.lista-contacto {
   list-style: none;
-  padding: 0;
 }
-.contact-list-premium li {
-  display: flex;
-  align-items: center;
+.lista-contacto li {
+  display: flex; /* pone el ícono y el texto en fila */
+  align-items: center; /* centra verticalmente el ícono con el texto */
   gap: 20px;
   margin-bottom: 35px;
 }
-.contact-list-premium li .contact-icon-box {
-  width: 44px;
-  height: 44px;
-  background-color: #bc9c70;
-  border-radius: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-}
-.contact-list-premium li .contact-icon-box svg {
-  width: 20px;
-  height: 20px;
-  fill: #0b111e;
-}
-.contact-list-premium li strong {
+.lista-contacto li strong {
   display: block;
   font-size: 11px;
   font-weight: 700;
@@ -482,97 +476,118 @@ FIN FOOTER/ PIE DE PAGINA
   color: #788293;
   margin-bottom: 4px;
 }
-.contact-list-premium li p {
+.lista-contacto li p {
   font-size: 14px;
   color: #ffffff;
-  margin: 0;
 }
 
-.contact-social-squares {
+/* Cuadrito dorado con el ícono adentro */
+.icono-contacto {
+  width: 44px;
+  height: 44px;
+  background-color: #bc9c70;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center; /* centra el ícono horizontalmente */
+  align-items: center; /* centra el ícono verticalmente */
+  flex-shrink: 0; /* evita que el cuadrito se achique si falta espacio */
+}
+.icono-contacto img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Fila de íconos de redes sociales */
+.redes-sociales {
   display: flex;
   gap: 12px;
   margin-top: 40px;
 }
-.contact-social-squares a {
+.redes-sociales a {
   width: 38px;
   height: 38px;
   border: 1px solid #1f293d;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 0.3s;
 }
-.contact-social-squares a img {
+.redes-sociales a img {
   width: 16px;
   height: 16px;
-  object-fit: contain;
-  filter: brightness(0.7);
+  filter: brightness(0.7); /* oscurece un poco el ícono para que no resalte tanto */
 }
-.contact-social-squares a:hover {
-  background-color: #121b2d;
-}
-.contact-social-squares a:hover img {
-  filter: brightness(1);
+.redes-sociales a:hover img {
+  filter: brightness(1); /* al pasar el mouse el ícono se ve con su brillo normal */
 }
 
 /* ========================================================
-   --- Columna Derecha: Formulario 
+   FORMULARIO DE CONTACTO
    ======================================================== */
-.contact-form {
-  background-color: #0b111e;
-  border: 1px solid #1f293d;
-  border-radius: 4px;
-  padding: 45px;
+.contacto-formulario {
+  flex: 0.9; /* ocupa un poco menos espacio que la columna de info */
+  background-color: #0b111e; /* mismo fondo oscuro de la sección */
+  border: 1px solid #1f293d; /* borde delgado para separar el formulario del fondo */
+  border-radius: 4px; /* esquinas un poco redondeadas */
+  padding: 45px; /* espacio interno para que no se vea pegado a los bordes */
 }
-.contact-form .titulo-elegante-formulario {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 28px;
-  font-weight: normal;
-  margin-bottom: 12px;
-  color: #ffffff;
+
+/* form-fila: agrupa 2 campos en una misma fila (Nombre + Apellido, etc.) */
+.form-fila {
+  display: flex; /* Flexbox: pone los 2 form-group en fila */
+  gap: 20px; /* espacio entre ambos campos */
 }
-.contact-form .subtitulo-form {
-  color: #788293;
-  font-size: 14px;
-  margin-bottom: 35px;
+.form-fila .form-group {
+  flex: 1; /* cada campo ocupa el mismo ancho dentro de la fila */
 }
-.contact-form .form-group {
-  margin-bottom: 25px;
+
+/* form-group: una etiqueta (label) + su campo (input/select/textarea) */
+.form-group {
+  margin-bottom: 25px; /* separación con el siguiente grupo de campos */
 }
-.contact-form .form-group label {
-  display: block;
+.form-group label {
+  display: block; /* el label ocupa su propia línea, arriba del campo */
   font-size: 11px;
   font-weight: 700;
+  text-transform: uppercase; /* pasa el texto del label a mayúsculas */
   letter-spacing: 0.5px;
-  text-transform: uppercase;
   color: #788293;
-  margin-bottom: 8px;
+  margin-bottom: 8px; /* espacio entre el label y el campo */
 }
-.contact-form .form-group input, .contact-form .form-group select, .contact-form .form-group textarea {
-  width: 100%;
-  padding: 14px;
-  background-color: #121b2d;
-  border: 1px solid #1f293d;
+.form-group {
+  /* Estilo compartido para los 3 tipos de campos que usamos */
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%; /* el campo llena todo el ancho de su columna */
+  padding: 14px; /* espacio interno para que el texto no quede pegado al borde */
+  background-color: #121b2d; /* fondo del campo, un poco más claro que el del formulario */
+  border: 1px solid #1f293d; /* borde delgado */
   border-radius: 4px;
   font-size: 14px;
-  color: #ffffff;
+  color: #ffffff; /* texto en blanco porque el fondo es oscuro */
+  /* Color del texto de ejemplo que aparece antes de escribir (placeholder) */
 }
-.contact-form .form-group input::placeholder, .contact-form .form-group select::placeholder, .contact-form .form-group textarea::placeholder {
+.form-group input::placeholder,
+.form-group select::placeholder,
+.form-group textarea::placeholder {
   color: #434f65;
 }
-.contact-form .form-group input:focus, .contact-form .form-group select:focus, .contact-form .form-group textarea:focus {
-  outline: none;
-  border-color: #bc9c70;
+.form-group input,
+.form-group select,
+.form-group textarea {
+  /* Cuando el usuario hace clic en el campo (focus) */
 }
-.contact-form .formulario-fila {
-  display: flex;
-  gap: 20px;
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none; /* quita el contorno azul que pone el navegador por defecto */
+  border-color: #bc9c70; /* y en su lugar resalta el borde en dorado */
 }
-.contact-form .formulario-fila .form-group {
-  flex: 1;
-}
-.contact-form .btn-enviar-muestra {
-  width: 100%;
+
+/* Botón de enviar */
+.btn-enviar {
+  width: 100%; /* ocupa todo el ancho del formulario */
   background-color: #bc9c70;
   color: #0b111e;
   padding: 15px;
@@ -582,23 +597,14 @@ FIN FOOTER/ PIE DE PAGINA
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
+  cursor: pointer; /* muestra la manito al pasar el mouse */
   margin-top: 15px;
-  transition: opacity 0.3s;
 }
-.contact-form .btn-enviar-muestra:hover {
-  opacity: 0.9;
+.btn-enviar:hover {
+  opacity: 0.9; /* se ve un poco más transparente al pasar el mouse */
 }
-.contact-form .btn-enviar-muestra .icon-send {
-  width: 14px;
-  height: 14px;
-  fill: #0b111e;
-}
-.contact-form .nota-privacidad-muestra {
+
+.nota-privacidad {
   margin-top: 20px;
   font-size: 12px;
   color: #434f65;
@@ -696,28 +702,26 @@ FIN FOOTER/ PIE DE PAGINA
    BOTÓN VOLVER 
    ======================================================== */
 .boton-volver {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
+  position: fixed; /* lo mantiene pegado en la pantalla aunque hagas scroll */
+  bottom: 25px; /* separación desde abajo */
+  right: 25px; /* separación desde la derecha */
   width: 42px;
   height: 42px;
-  border-radius: 50%;
+  border-radius: 50%; /* redondea el cuadrado hasta hacerlo un círculo */
   background-color: #121b2d;
   color: #ffffff;
-  display: flex;
-  justify-content: center;
+  display: flex; /* para poder centrar la flecha "←" */
+  justify-content: center; /* centra la flecha horizontalmente */
   align-items: center;
   font-size: 16px;
-  font-weight: 800;
-  z-index: 999;
-  border: 1px solid #1f293d;
-  transition: background-color 0.3s, transform 0.3s;
 }
 .boton-volver:hover {
-  background-color: #1f293d;
-  transform: scale(1.05);
+  background-color: #1f293d; /* solo cambia el color */
 }
 
+/* ========================================================
+FINAL DE CONTACTO.HTML   
+   ======================================================== */
 /*
 Este archivo solo conecta los parciales Sass.
 Ejemplo de uso aquí:

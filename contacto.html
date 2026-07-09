@@ -5,27 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Nova Tours</title>
-    <link rel="stylesheet" href="scss/estilos.css">
+    <link rel="stylesheet" href="../Contacto/scss/estilos.css">
 </head>
 
 <body>
-    <!-- Inicio de la Cabecera  -->
+    <!-- Inicio de la Cabecera -->
     <header class="header">
         <div class="logo">
             <strong>NOVA</strong> TOURS
         </div>
         <ul class="menu">
-            <li><a href="index.html#destinos">DESTINOS</a></li>
+            <li><a href="index.html">DESTINOS</a></li>
             <li><a href="experiencias.html">EXPERIENCIAS</a></li>
             <li><a href="inspiracion.html">INSPIRACION</a></li>
             <li><a href="contacto.html">CONTACTO</a></li>
         </ul>
-        <a href="#" class="btn">Reservar Ahora </a>
+        <a href="#" class="btn">Reservar</a>
     </header>
     <!-- Fin de la Cabecera -->
 
     <main>
-        <!-- === INICIO CABECERA INTERNA DE LA PÁGINA === -->
+        <!-- Cabecera con img de fondo -->
         <section class="cabecera-contacto">
             <img class="cabecera-contacto-imagen" src="https://picsum.photos/id/1043/1800/1200"
                 alt="Planifica tu viaje al Perú con NovaTours">
@@ -37,40 +37,41 @@
                     imaginas.</p>
             </div>
         </section>
-        <!-- === FIN CABECERA INTERNA DE LA PÁGINA === -->
 
-        <!-- === INICIO SECCIÓN CONTACTO === -->
-        <section class="contact-section" id="contacto">
-            <div class="contact-grid">
-
-                <!-- Columna izquierda: información -->
-                <div class="contact-info">
-                    <h2 class="titulo-elegante-principal">Estamos aquí para ayudarte</h2>
-                    <p class="subtitulo-info">Nuestro equipo de especialistas en turismo peruano responde en menos de 24 horas. Cuéntanos tu
-                        sueño y lo convertimos en itinerario.</p>
-
-                    <ul class="contact-list-premium">
+        <!-- =======================
+         SECCION DE CONTACTO
+         Sección con dos columnas con flexbox, una con el formulario de contacto y otra con la información de contacto
+         =========================-->
+        <section class="contacto-seccion">
+            <div class="contacto-columnas">
+                <!--Columna izquierda: info-->
+                <div class="contacto-info">
+                    <h2 class="titulo-elegante grande">Estamos aquí para ayudarte</h2>
+                    <p class="subtitulo">Nuestro equipo de especialistas en turismo peruano responde en menos de 24
+                        horas. Cuéntanos tu sueño y lo convertimos en itinerario.</p>
+                    <!--Lista de datos de contacto-->
+                    <ul class="lista-contacto">
                         <li>
-                            <div class="contact-icon-box">
-                                <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.15 15.15 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27 11.72 11.72 0 003.74.6 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.6 3.74 1 1 0 01-.27 1.1l-2.21 2.2z"/></svg>
+                            <div class="icono-contacto">
+                                <img src="../Contacto/img/contacto/icon-icons (1).png">
                             </div>
                             <div>
                                 <strong>TELÉFONO</strong>
-                                <p>+51 1 422 5500</p>
+                                <p>+51 987 654 321</p>
                             </div>
                         </li>
                         <li>
-                            <div class="contact-icon-box">
-                                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                            <div class="icono-contacto">
+                                <img src="../Contacto/img/contacto/icon-icons (2).png">
                             </div>
                             <div>
                                 <strong>EMAIL</strong>
-                                <p>hola@novatours.app</p>
+                                <p>hola@novatours.pe</p>
                             </div>
                         </li>
                         <li>
-                            <div class="contact-icon-box">
-                                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                            <div class="icono-contacto">
+                                <img src="../Contacto/img/contacto/icon-icons (3).png" alt="Dirección">
                             </div>
                             <div>
                                 <strong>OFICINA PRINCIPAL</strong>
@@ -78,8 +79,8 @@
                             </div>
                         </li>
                         <li>
-                            <div class="contact-icon-box">
-                                <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                            <div class="icono-contacto">
+                                <img src="../Contacto/img/contacto/icon-icons (4).png" alt="Horario de atención">
                             </div>
                             <div>
                                 <strong>HORARIO DE ATENCIÓN</strong>
@@ -88,44 +89,45 @@
                         </li>
                     </ul>
 
-                    <!-- Redes sociales  -->
-                    <div class="contact-social-squares">
-                        <a href="#"><img src="./img/social/icon-icons (1).png"></a>
-                        <a href="#"><img src="./img/social/icon-icons.png"></a>
-                        <a href="#"><img src="./img/social/icon-icons (2).png"></a>
-                        <a href="#"><img src="./img/social/icon-icons (3).png"></a>
-                        <a href="#"><img src="./img/social/icon-icons (4).png"></a>
+                    <!--Redes sociales-->
+                    <div class="redes-sociales">
+                        <a href="#"><img src="../Contacto/img/social/icon-icons (1).png"></a>
+                        <a href="#"><img src="../Contacto/img/social/icon-icons (2).png"></a>
+                        <a href="#"><img src="../Contacto/img/social/icon-icons (3).png"></a>
+                        <a href="#"><img src="../Contacto/img/social/icon-icons (4).png"></a>
                     </div>
                 </div>
+                <!--  cierra contacto-info -->
 
-                <!-- Columna derecha: formulario -->
-                <form class="contact-form" action="mailto:felipe.ostosb@istpargentina.edu.pe" method="post" enctype="text/plain">
-                    <h2 class="titulo-elegante-formulario">Cuéntanos sobre tu viaje</h2>
-                    <p class="subtitulo-form">Completa el formulario y un especialista se pondrá en contacto contigo.</p>
+                <!--Columna derecha: formulario-->
+                <form class="contacto-formulario" action="#" method="POST">
+                    <h2 class="titulo-elegante">Cuéntanos sobre tu viaje</h2>
+                    <p class="subtitulo">Completa el formulario y un especialista se pondrá en contacto contigo.</p>
 
-                    <div class="formulario-fila">
+                    <!-- Form-fila (fila con 2 campos usando flexbox)-->
+                    <div class="form-fila">
                         <div class="form-group">
                             <label for="nombre">Nombre</label>
-                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                            <input type="text" name="nombre" placeholder="Tu nombre" required>
                         </div>
                         <div class="form-group">
                             <label for="apellido">Apellido</label>
-                            <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required>
+                            <input type="text" name="apellido" placeholder="Tu apellido" required>
                         </div>
                     </div>
 
-                    <div class="formulario-fila">
+                    <div class="form-fila">
                         <div class="form-group">
                             <label for="correo">Correo electrónico</label>
-                            <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" required>
+                            <input type="email" name="correo" placeholder="correo@ejemplo.com" required>
                         </div>
                         <div class="form-group">
                             <label for="telefono">Teléfono / WhatsApp</label>
-                            <input type="tel" id="telefono" name="telefono" placeholder="+51 999 000 000">
+                            <input type="tel" name="telefono" placeholder="+51 999 000 000">
                         </div>
                     </div>
 
-                    <div class="formulario-fila">
+                    <div class="form-fila">
                         <div class="form-group">
                             <label for="destino">Destino de interés</label>
                             <select id="destino" name="destino">
@@ -146,14 +148,12 @@
                                 <option value="aventura">Aventura y Trekking</option>
                                 <option value="gastronomia">Alta Gastronomía</option>
                                 <option value="cultura">Cultura Viva</option>
-                                <option value="misticismo">Misticismo y Bienestar</option>
                                 <option value="fotografia">Fotografía de Viaje</option>
                                 <option value="varias">Varias experiencias</option>
                             </select>
                         </div>
                     </div>
-
-                    <div class="formulario-fila">
+                    <div class="form-fila">
                         <div class="form-group">
                             <label for="fecha">Fecha estimada de viaje</label>
                             <input type="date" id="fecha" name="fecha">
@@ -178,18 +178,17 @@
                             required></textarea>
                     </div>
 
-                    <!-- Botón  -->
-                    <button type="submit" class="btn-enviar-muestra">
-                        <svg class="icon-send" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-                        Enviar consulta
-                    </button>
+                    <button type="submit" class="btn-enviar">Enviar consulta →</button>
 
-                    <p class="nota-privacidad-muestra">Tu información es confidencial. Nunca compartimos tus datos con terceros.</p>
+                    <p class="nota-privacidad">Tu información es confidencial. Nunca compartimos tus datos con
+                        terceros.</p>
                 </form>
             </div>
         </section>
-        <!-- === FIN SECCIÓN CONTACTO === -->
 
+        <!-- ===================================================
+             BLOQUE DE CIFRAS (ESTADÍSTICAS)
+        ==================================================== -->
         <section class="contacto-estadisticas">
             <div class="estadistica">
                 <strong>+12,000</strong>
@@ -205,7 +204,7 @@
             </div>
         </section>
 
-        <a href="index.html" class="boton-volver">←</a>
+        <a href="../index.html" class="boton-volver">←</a>
     </main>
 
     <!-- === FOOTER  === -->
@@ -213,11 +212,12 @@
         <div class="footer-principal">
             <div class="footer-izq">
                 <div class="footer-logo-brand"><strong>NOVA</strong> TOURS</div>
-                <p class="footer-brand-text">Inspirando viajes a través de narrativas visuales. Descubre la belleza del Perú en su máxima expresión.</p>
+                <p class="footer-brand-text">Inspirando viajes a través de narrativas visuales. Descubre la belleza del
+                    Perú en su máxima expresión.</p>
                 <div class="footer-social-icons">
-                    <a href="#"><img src="./img/social/icon-icons (1).png"></a>
-                    <a href="#"><img src="./img/social/icon-icons.png"></a>
-                    <a href="#"><img src="./img/social/icon-icons (2).png"></a>
+                    <a href="#"><img src="../Contacto/img/social/icon-icons (1).png" alt="Facebook"></a>
+                    <a href="#"><img src="../Contacto/img/social/icon-icons.png" alt="Instagram"></a>
+                    <a href="#"><img src="../Contacto/img/social/icon-icons (2).png" alt="Twitter"></a>
                 </div>
             </div>
             <div class="footer-der">
@@ -226,14 +226,7 @@
         </div>
     </footer>
 
+    <script src="../Contacto/js/main.js"></script>
 </body>
-<script src="js/main.js"></script>
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "xjjnluwxyk");
-</script>
 
 </html>
