@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 /*
 Archivo para guardar solo variables.
 
@@ -1268,11 +1268,21 @@ textarea {
    ========================================== */
 .header {
   padding: 18px 5%;
-  background: transparent;
+  background: rgba(6, 12, 23, 0);
   backdrop-filter: blur(0);
   border-bottom: 1px solid transparent;
   box-shadow: none;
-  transition: background-color 220ms ease, box-shadow 220ms ease, border-color 220ms ease, backdrop-filter 220ms ease;
+  transition: background-color 260ms ease, box-shadow 260ms ease, border-color 260ms ease, backdrop-filter 260ms ease;
+  /* Subtle vignette gradient behind header to guarantee contrast at start */
+}
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(6, 12, 23, 0.85) 0%, rgba(6, 12, 23, 0) 100%);
+  z-index: -1;
+  pointer-events: none;
+  transition: opacity 260ms ease;
 }
 .header.scrolled {
   background: rgba(6, 12, 23, 0.88);
@@ -1280,16 +1290,19 @@ textarea {
   box-shadow: 0 14px 50px rgba(0, 0, 0, 0.28), inset 0 -1px 0 rgba(197, 168, 128, 0.08);
   backdrop-filter: blur(16px);
 }
+.header.scrolled::before {
+  opacity: 0;
+}
 
 .logo {
   font-size: 18px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 400; /* Increased from 300 for better contrast */
 }
 .logo strong {
   color: #C5A880;
-  font-weight: 600;
+  font-weight: 700; /* Increased from 600 for better contrast */
 }
 
 .menu {
@@ -1298,10 +1311,10 @@ textarea {
 .menu a {
   color: #C5CDE0;
   font-size: 11px;
-  font-weight: 300;
+  font-weight: 500; /* Increased from 300 for better contrast */
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  opacity: 0.86;
+  opacity: 0.95; /* Increased from 0.86 for better contrast */
 }
 .menu a:hover {
   color: #C5A880;
