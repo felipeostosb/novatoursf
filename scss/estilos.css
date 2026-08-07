@@ -1350,8 +1350,8 @@ CABECERA INTERNA CON IMAGEN DE FONDO
 }
 
 .footer-premium .footer-social-icons a img {
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   -o-object-fit: contain;
   object-fit: contain;
   filter: brightness(0.8);
@@ -1361,11 +1361,48 @@ CABECERA INTERNA CON IMAGEN DE FONDO
   transform: translateY(-2px);
 }
 
+.footer-premium .footer-der {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  text-align: right;
+}
+
+.footer-premium .footer-contacto {
+  color: #9ca3af;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
 .footer-premium .footer-der .copyright-text {
   color: #4a5568;
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 1px;
   text-transform: uppercase;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .footer-premium {
+    padding: 50px 6% 30px 6%;
+  }
+
+  .footer-premium .footer-principal {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-premium .footer-der {
+    width: 100%;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .footer-premium .footer-izq {
+    max-width: 100%;
+  }
 }
 
 /* ========================================================
