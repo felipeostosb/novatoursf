@@ -1504,13 +1504,25 @@ textarea {
 }
 
 .btn-outline {
-  background: rgba(255, 255, 255, 0.02);
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 11px;
+  font-weight: 500;
+  text-decoration: none;
+  background: transparent;
   color: #C5A880;
-  border: 1px solid rgba(197, 168, 128, 0.28);
+  border: 1.5px solid rgba(197, 168, 128, 0.65);
+  transition: all 0.25s ease;
 }
 .btn-outline:hover {
-  background: rgba(197, 168, 128, 0.08);
-  color: #FFFFFF;
+  background: #C5A880;
+  color: #0A1628;
+  border-color: #C5A880;
+  box-shadow: 0 4px 15px rgba(197, 168, 128, 0.2);
+  transform: translateY(-1px);
 }
 
 .footer,
@@ -2164,16 +2176,18 @@ textarea {
 }
 
 .filter-pill {
-  background: rgba(19, 34, 56, 0.58);
+  background: rgba(19, 34, 56, 0.86);
   color: #C5CDE0;
-  border: 1px solid rgba(197, 168, 128, 0.16);
-  padding: 11px 18px;
-  font-size: 10px;
+  border: 1px solid rgba(197, 168, 128, 0.28);
+  padding: 11px 22px;
+  font-size: 11px;
+  font-weight: 500;
+  transition: all 0.25s ease;
 }
 .filter-pill.active, .filter-pill:hover {
-  background: rgba(197, 168, 128, 0.14);
-  color: #FFFFFF;
-  border-color: rgba(197, 168, 128, 0.45);
+  background: #C5A880;
+  color: #0A1628;
+  border-color: #C5A880;
 }
 
 .blog-layout {
@@ -2208,12 +2222,27 @@ textarea {
   line-height: 1.7;
 }
 .insp-card .insp-card-content .btn-read {
-  color: #C5A880;
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: 15px;
+  padding: 10px 24px;
   font-size: 11px;
-  font-weight: 300;
+  font-weight: 500;
+  color: #0A1628 !important;
+  background: linear-gradient(135deg, rgba(197, 168, 128, 0.98), rgba(156, 105, 76, 0.96));
+  border: 1px solid rgba(197, 168, 128, 0.72);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 999px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.25s ease;
 }
 .insp-card .insp-card-content .btn-read:hover {
-  color: #FFFFFF;
+  background: #C5A880;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(197, 168, 128, 0.25);
 }
 .insp-card:hover {
   transform: translateY(-4px);
